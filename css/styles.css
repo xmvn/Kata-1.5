@@ -1,0 +1,137 @@
+@import url("fonts.css");
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family:"TT Lakes", sans-serif;
+}
+body{
+  margin: 0 auto;
+  min-width: 320px;
+  overflow: hidden;
+  
+}
+.services-block{
+  border-top: 2px solid #D9FFF5;
+  border-radius: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #F8F8F8;
+}
+.services-header{
+  height: 80px;
+  border: 1px sold red;
+  background: linear-gradient(90deg, #F8F8F8 0%, #FFF 100%);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+.services-header p{
+  color: #7E7E82;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+  margin: 16px;
+  }
+.circle-btn{
+  background: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.circle-btn-go{
+  background-image: url(../img/go.svg);
+}
+.services-element {
+  padding: 16px;
+  box-sizing: border-box;
+  width: 240px;
+  height: 72px;
+  border-radius: 6px;
+  border: 1px solid #EAEAEA;
+  background: #FFF;
+  margin: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.swiper-pagination{
+  position: inherit;
+  padding-bottom: 38px;
+}
+.services-block__show-hide-button{
+  display: none;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-bottom: 34px;
+}
+
+@media screen and (min-width: 768px) {
+  body{
+    max-width: 768px;
+  }
+  .services-header p{
+    margin-left: 24px;
+  }
+  .services-block__show-hide-button{
+    display: block;
+  }
+  .services-block__show-hide-button::before{
+    content: "";
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    background-image: url("../img/expand.svg");
+    vertical-align: middle;
+    margin-left: 24px;
+  }
+  .swiper-wrapper{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+  text-align: left;
+  }
+  .services-element_hidden{
+    display: none;
+  }
+  .swiper-pagination{
+    display: none;
+  }
+  .services-element{
+  width: 224px;
+  }
+}
+@media screen and (min-width: 1120px) {
+  .services-header p{
+    margin-left: 32px;
+  }
+  body{
+    max-width: 1120px;
+  }
+  .swiper-wrapper{
+    margin-left: 16px;
+  }
+.services-element_hidden-resize{
+  display: flex;
+}
+.services-element {
+  width: 240px;
+  
+ }
+}
